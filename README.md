@@ -1,4 +1,4 @@
-# Starting point
+# wunker-os
 
 [![build-ublue](https://github.com/gmpinder/wunker-os/actions/workflows/build.yml/badge.svg)](https://github.com/gmpinder/wunker-os/actions/workflows/build.yml)
 
