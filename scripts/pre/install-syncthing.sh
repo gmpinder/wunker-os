@@ -13,7 +13,7 @@ wget "${BASE_URL}/${VERSION}/${FILENAME}"
 tar xvf "${FILENAME}"
 
 # Move the binary to /usr/local/bin
-mv "${EXTRACTED_DIR}/syncthing" /usr/local/bin
+mv "${EXTRACTED_DIR}/syncthing" /usr/bin
 
 # Move .desktop files
 mv "${EXTRACTED_DIR}/etc/linux-desktop/"*.desktop /usr/share/applications/
