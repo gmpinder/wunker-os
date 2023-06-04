@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-dnf install git gcc-c++ pkgconfig libusb1-devel boost-devel systemd-devel dbus-devel python3-scon
+dnf install git gcc-c++ pkgconfig libusb1-devel boost-devel systemd-devel dbus-devel python3-scons
 cd ~
 mkdir src
 cd src
