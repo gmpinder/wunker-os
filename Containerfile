@@ -31,7 +31,7 @@ ARG RECIPE=./recipe.yml
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr/bin /usr/bin
 COPY usr/lib /usr/lib
-COPY usr/local /usr/local
+COPY usr/etc /usr/etc
 COPY usr/share /usr/share
 
 # Copy the recipe that we're building.
@@ -45,9 +45,9 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY --from=gcr.io/projectsigstore/cosign /ko-app/cosign /usr/bin/cosign
 
 # Install xboxdrv for the Xbox 360 controller.
-COPY --from=xboxdrv-bin /usr/local/bin/xboxdrv /usr/local/bin/xboxdrv
-COPY --from=xboxdrv-bin /usr/local/bin/xboxdrvctl /usr/local/bin/xboxdrvctl
-COPY --from=xboxdrv-bin /usr/local/share/man/man1/xboxdrv.1 /usr/local/share/man/man1/xboxdrv.1
+COPY --from=xboxdrv-bin /usr/local/bin/xboxdrv /usr/bin/xboxdrv
+COPY --from=xboxdrv-bin /usr/local/bin/xboxdrvctl /usr/bin/xboxdrvctl
+COPY --from=xboxdrv-bin /usr/local/share/man/man1/xboxdrv.1 /usr/share/man/man1/xboxdrv.1
 
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
