@@ -10,7 +10,7 @@ ARG FEDORA_MAJOR_VERSION=38
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
 # This is to install xboxdrv for the Xbox 360 controller.
-FROM registry.fedoraproject.org/fedora:${FEDORA_MAJOR_VERSION} as xboxdrv-bin
+FROM registry.fedoraproject.org/fedora-toolbox:${FEDORA_MAJOR_VERSION} as xboxdrv-bin
 
 COPY scripts/install-xboxdrv.sh /tmp/scripts/install-xboxdrv.sh
 
@@ -41,7 +41,10 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 # Install cosign for verifying signatures for images.
 COPY --from=gcr.io/projectsigstore/cosign /ko-app/cosign /usr/bin/cosign
 
-COPY --from=xboxdrv-bin /usr/bin/xboxdrv /usr/bin/xboxdrv
+# Install xboxdrv for the Xbox 360 controller.
+COPY --from=xboxdrv-bin /usr/local/bin/xboxdrv /usr/local/bin/xboxdrv
+COPY --from=xboxdrv-bin /usr/local/bin/xboxdrvctl /usr/local/bin/xboxdrvctl
+COPY --from=xboxdrv-bin /usr/local/share/man/man1/xboxdrv.1 /usr/local/share/man/man1/xboxdrv.1
 
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
