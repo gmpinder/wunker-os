@@ -1,0 +1,4 @@
+SUBSYSTEM=="usb", ATTR{idVendor}=="2dc8", ATTR{idProduct}=="3106", ATTR{manufacturer}=="8BitDo", RUN+="/usr/bin/systemctl start 8bitdo-ultimate-xinput@2dc8:3106"
+
+# This device is connected when the above device disconnects
+SUBSYSTEM=="usb", ATTR{idVendor}=="2dc8", ATTR{idProduct}=="3109", ATTR{manufacturer}=="8BitDo", RUN+="/usr/bin/systemctl stop 8bitdo-ultimate-xinput@2dc8:3106"
