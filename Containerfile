@@ -31,6 +31,9 @@ COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
 # Copied from the official container image since it's not available as an RPM.
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
+# Install cosign for verifying signatures for images.
+COPY --from=gcr.io/projectsigstore/cosign /ko-app/cosign /usr/bin/cosign
+
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
 
