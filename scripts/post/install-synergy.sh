@@ -10,18 +10,18 @@ version="v3.0.72.1-rc1"
 base_name="synergy-linux_x64-libssl3"
 
 # Define file URL
-url="https://rc.symless.com/synergy3/${version}/${base_name}-${version}.flatpak"
+url="https://rc.symless.com/synergy3/${version}/${base_name}-${version}.rpm"
 
 # Define file name
-file="/tmp/${base_name}-${version}.flatpak"
+file="/tmp/${base_name}-${version}.rpm"
 
 # Download file
 echo "Downloading file..."
 wget -O "$file" "$url"
 
-# Install the package
+# Install the package using rpm
 echo "Installing package..."
-flatpak install -y "$file"
+rpm -i "$file"
 
 # Remove the downloaded file
 echo "Removing the downloaded file..."
