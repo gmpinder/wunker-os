@@ -15,9 +15,19 @@ url="https://rc.symless.com/synergy3/${version}/${base_name}-${version}.rpm"
 # Define file name
 file="/tmp/${base_name}-${version}.rpm"
 
+# Directory that we need to remove before installation
+dir="/opt/Synergy"
+
 # Download file
 echo "Downloading file..."
-wget -O "$file" "$url"
+wget -Oq "$file" "$url"
+
+# Check if directory exists
+if [ -d "$dir" ]
+then
+    echo "Removing existing directory..."
+    rm -rf "$dir"
+fi
 
 # Install the package using rpm
 echo "Installing package..."
