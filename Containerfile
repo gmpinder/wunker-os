@@ -5,9 +5,9 @@
 # in the cloud. The ARGs have default values, but changing those
 # does nothing if the image is built in the cloud.
 
-ARG FEDORA_MAJOR_VERSION=38
+ARG FEDORA_MAJOR_VERSION=37
 # Warning: changing this might not do anything for you. Read comment above.
-ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
+ARG BASE_IMAGE_URL=ghcr.io/ublue-os/kinoite-main
 
 # This is to install xboxdrv for the Xbox 360 controller.
 FROM registry.fedoraproject.org/fedora-toolbox:${FEDORA_MAJOR_VERSION} as xboxdrv-bin
@@ -20,7 +20,7 @@ FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
 
 # The default recipe set to the recipe's default filename
 # so that `podman build` should just work for many people.
-ARG RECIPE=./recipe.yml
+ARG RECIPE=./recipe-framework.yml
 
 # Copy static configurations and component files.
 # Warning: If you want to place anything in "/etc" of the final image, you MUST
