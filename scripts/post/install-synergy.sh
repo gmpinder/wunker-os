@@ -20,7 +20,7 @@ dir="/opt/Synergy"
 
 # Download file
 echo "Downloading file..."
-wget -Oq "$file" "$url"
+wget -qO "$file" "$url"
 
 # Check if directory exists
 if [ -d "$dir" ]
