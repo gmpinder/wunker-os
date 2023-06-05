@@ -7,10 +7,10 @@ FILENAME="syncthing-linux-amd64-${VERSION}.tar.gz"
 EXTRACTED_DIR="syncthing-linux-amd64-${VERSION}"
 
 # Download the file
-wget "${BASE_URL}/${VERSION}/${FILENAME}"
+wget --quiet "${BASE_URL}/${VERSION}/${FILENAME}"
 
 # Extract the file
-tar xvf "${FILENAME}"
+tar xf "${FILENAME}"
 
 # Move the binary to /usr/local/bin
 mv "${EXTRACTED_DIR}/syncthing" /usr/bin
