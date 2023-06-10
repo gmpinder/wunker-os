@@ -2,7 +2,7 @@
 set -eou pipefail
 
 # Version number
-VERSION=$(curl -s "https://blog.jetbrains.com/idea/" | grep -oP 'IntelliJ IDEA \K[0-9]+\.[0-9]+\.[0-9]*' | head -1)
+VERSION="2023.1.2"
 
 # Download https://download.jetbrains.com/idea/ideaIC-${VERSION}.tar.gz
 curl -L -o /tmp/ideaIC-${VERSION}.tar.gz https://download.jetbrains.com/idea/ideaIC-${VERSION}.tar.gz
