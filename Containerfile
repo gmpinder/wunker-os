@@ -33,6 +33,7 @@ COPY usr/bin /usr/bin
 COPY usr/lib /usr/lib
 COPY usr/etc /usr/etc
 COPY usr/share /usr/share
+COPY etc /etc
 
 # Copy the recipe that we're building.
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
