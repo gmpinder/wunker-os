@@ -31,6 +31,7 @@ rpm:
     - tlp
     - powertop
     - neofetch
+    - virt-manager
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
