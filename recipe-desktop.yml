@@ -27,6 +27,7 @@ rpm:
     - neofetch
     - docker
     - virt-manager
+    - alsa-tools
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
