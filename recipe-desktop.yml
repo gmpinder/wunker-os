@@ -7,6 +7,7 @@ scripts:
     - autorun.sh
   post:
     - autorun.sh
+    - setup-desktop-audio.sh
 rpm:
   # A list of urls of ".repo" files that should be added to your system.
   # This is the proper way to add custom COPR repos to your image.
@@ -27,7 +28,7 @@ rpm:
     - neofetch
     - docker
     - virt-manager
-    - alsa-tools
+    # - alsa-tools
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
