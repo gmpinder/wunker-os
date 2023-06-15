@@ -34,7 +34,7 @@ rpm:
     - firefox
     - firefox-langpacks
 firstboot:
-  yafti: true
+  yafti: false
   flatpaks:
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
