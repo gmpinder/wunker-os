@@ -1,6 +1,6 @@
 name: wunker-os-framework
 base-image: ghcr.io/ublue-os/kinoite-main
-fedora-version: 38
+fedora-version: 37
 description: The image of Wunker OS for a Framework laptop. Make your own! https://ublue.it/making-your-own/
 scripts:
   pre:
