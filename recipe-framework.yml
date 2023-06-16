@@ -7,7 +7,6 @@ scripts:
     - autorun.sh
   post:
     - autorun.sh
-    - enable-fingerprintd.sh
 rpm:
   # A list of urls of ".repo" files that should be added to your system.
   # This is the proper way to add custom COPR repos to your image.
@@ -32,6 +31,7 @@ rpm:
     - powertop
     - neofetch
     - virt-manager
+    - plasma-browser-integration
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
