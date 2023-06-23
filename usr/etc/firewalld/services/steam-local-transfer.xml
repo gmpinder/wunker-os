@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>steam-local-transfer</short>
+  <description>Steam local transfer</description>
+  <port protocol="tcp" port="57343"/>
+  <port protocol="tcp" port="27040"/>
+</service>
