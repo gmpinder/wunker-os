@@ -29,7 +29,6 @@ rpm:
     - docker
     - virt-manager
     - plasma-browser-integration
-    - barrier
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
