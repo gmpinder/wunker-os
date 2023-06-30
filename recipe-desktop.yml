@@ -1,6 +1,6 @@
 name: wunker-os-desktop
 base-image: ghcr.io/ublue-os/kinoite-nvidia
-fedora-version: 37
+fedora-version: 38
 description: The image of Wunker OS for an Nvidia based desktop meant for gaming. Make your own! https://ublue.it/making-your-own/
 scripts:
   pre:
